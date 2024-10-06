@@ -1,0 +1,174 @@
+/* App.css */
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif; /* Change font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background color */
+}
+
+/* Container styles */
+.container {
+    padding: 20px; /* Overall padding */
+    max-width: 1200px; /* Center the container */
+    margin: auto; /* Center align */
+}
+
+/* Header styles */
+.title {
+    text-align: center;
+    font-size: 2.5rem; /* Larger font size */
+    font-weight: bold;
+    margin-bottom: 1rem; /* Spacing */
+    color: #e91e63; /* Myntra pink */
+}
+
+/* Search Bar styles */
+.search-bar {
+    margin-bottom: 2rem; /* Spacing */
+    text-align: center; /* Center the search bar */
+}
+
+.search-bar input {
+    border: 2px solid #e91e63; /* Myntra pink */
+    border-radius: 25px; /* Rounded corners */
+    padding: 12px 20px; /* Padding for a better look */
+    width: 80%; /* Responsive width */
+    transition: border-color 0.3s; /* Smooth transition */
+    font-size: 1rem; /* Font size */
+}
+
+.search-bar input:focus {
+    outline: none; /* Remove default outline */
+    border-color: #c2185b; /* Darker pink on focus */
+}
+
+/* Product Grid styles */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Responsive grid */
+    column-gap: 1.5rem;
+    row-gap: 3rem; /* Set gap for both row and column spacing */
+    padding: 0 2rem; /* Padding for sides */
+}
+
+/* Product Card styles */
+.product-card {
+    background-color: #ffffff; /* White background */
+    border-radius: 8px; /* More rounded corners */
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation for hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    position: relative; /* For absolute positioning of overlay */
+    display: flex;
+    flex-direction: column; /* Align elements vertically */
+    padding: 1rem; /* Padding around product */
+    height: 100%; /* Ensures all cards are of equal height */
+}
+
+/* Product info styles */
+.product-info {
+    padding: 15px; /* Padding for info */
+    flex-grow: 1; /* Allow growth */
+    display: flex; /* Enable flexbox for children */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Space elements evenly */
+}
+
+/* Image styles */
+.product-image {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio */
+    transition: transform 0.3s; /* Transition for scaling */
+}
+
+/* Hover effect for product card */
+.product-card:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Hover effect for images */
+.product-image:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Title styles */
+.product-title {
+    font-size: 1.2rem; /* Title size */
+    font-weight: bold; /* Bold title */
+    margin: 0.5rem 0; /* Margin */
+}
+
+/* Description styles */
+.product-description {
+    color: #666; /* Gray text color */
+    font-size: 0.9rem; /* Smaller font size */
+    margin: 0.5rem 0; /* Margin */
+}
+
+/* Price styles */
+.product-price {
+    display: block; /* Block for price */
+    font-size: 1.2rem; /* Price size */
+    font-weight: bold; /* Bold price */
+    color: #e91e63; /* Myntra pink */
+}
+
+/* Rating styles */
+.rating {
+    color: #ffbb33; /* Yellow for rating stars */
+    font-size: 1rem; /* Size for rating */
+}
+
+/* Button styles */
+.add-to-cart {
+    margin-top: auto; /* Pushes button to the bottom */
+    background-color: #e91e63; /* Myntra pink */
+    color: white; /* White text */
+    padding: 10px 15px; /* Padding */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.add-to-cart:hover {
+    background-color: #c2185b; /* Darker pink on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* No products found message */
+.no-products {
+    text-align: center; /* Centered text */
+    font-size: 1.2rem; /* Larger size for visibility */
+}
+
+/* Loading Spinner styles */
+.loading {
+    text-align: center; /* Centered text */
+    margin-top: 2rem; /* Spacing */
+    font-size: 1.2rem; /* Larger size for loading text */
+}
+
+.loading::after {
+    content: " "; /* Spinner content */
+    display: inline-block; /* Inline block for spinner */
+    width: 1.5rem; /* Width */
+    height: 1.5rem; /* Height */
+    border: 3px solid #e91e63; /* Spinner color */
+    border-top: 3px solid transparent; /* Transparent top */
+    border-radius: 50%; /* Round shape */
+    animation: spin 1s linear infinite; /* Spin animation */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); /* Start rotation */
+    }
+    100% {
+        transform: rotate(360deg); /* End rotation */
+    }
+}
